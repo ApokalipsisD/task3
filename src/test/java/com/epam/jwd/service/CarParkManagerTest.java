@@ -3,6 +3,7 @@ package com.epam.jwd.service;
 import com.epam.jwd.repository.Car;
 import com.epam.jwd.repository.CarPark;
 import com.epam.jwd.repository.CarParkLot;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -29,6 +30,11 @@ class CarParkManagerTest {
                 this.add(new CarParkLot(5));
             }
         });
+    }
+
+    @AfterEach
+    void clearLots() {
+        carPark.getLots().clear();
     }
 
     @Test
