@@ -9,9 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ConcurrentLinkedDeque;
 
 import static java.util.concurrent.CompletableFuture.runAsync;
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,8 +17,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class CarParkManagerTest {
     private final CarPark carPark = new CarPark();
     private final CarParkManager carParkManager = new CarParkManager(carPark);
-    private final CarParkLot carParkLot = new CarParkLot(2);
-    private final Car car = new Car(carParkManager, 3);
 
     @BeforeEach
     void init() {
