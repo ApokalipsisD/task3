@@ -10,7 +10,7 @@ class ValidatorTest {
 
     @Test
     void shouldThrowNullPointerExceptionIfLotIsNull() {
-        assertThrows(MyException.class, () -> {
+        assertThrows(InappropriateValueException.class, () -> {
             Validator.isNull(carParkLot);
         });
     }

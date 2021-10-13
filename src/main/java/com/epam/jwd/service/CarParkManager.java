@@ -50,7 +50,7 @@ public class CarParkManager {
         } catch (InterruptedException e) {
             logger.error(ACQUIRED_FAILED);
             Thread.currentThread().interrupt();
-        } catch (MyException e) {
+        } catch (InappropriateValueException e) {
             logger.error(e.getMessage());
             Thread.currentThread().interrupt();
         }
